@@ -1,15 +1,13 @@
 # imports unittest functionality
 import unittest
 # imports leapyear class from leapyear program
-from leapyear import checkyear # type: ignore
+from leapyear import leapyear 
 
 class testCase(unittest.TestCase):
-    def setUp(self):
-        self.leap = leapyear()
-
     # tests the leap year checking functionality with a valid leap year
     def validyear(self):
-        self.assertEqual(self.leap.checkyear(2020), (True))
+        for year in [2020]:
+            assert leapyear(year) == 'True'
 
 
 if __name__ == "__main__":
