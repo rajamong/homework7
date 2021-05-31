@@ -12,6 +12,13 @@ class testCase(unittest.TestCase):
         for number in [3, 12, 21]:
             assert fizzbuzz(number) == 'Fizz'
 
+    # tests the functionality of the buzz,
+    # ensures it prints buzz for values that
+    # are evenly divisible by 5
+    def testbuzz(self):
+        for number in [5, 50, 100]:
+            assert fizzbuzz(number) == 'Buzz'
+
 
 if __name__ == "__main__":
     unittest.main()
